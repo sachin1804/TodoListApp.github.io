@@ -1,0 +1,189 @@
+* {
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    /* background-color: aliceblue; */
+
+}
+
+#input-section {
+    width: 40%;
+    height: 40vh;
+    border: 1px solid grey;
+    margin: 10px auto;
+}
+
+#input-section h1 {
+    text-align: center;
+    padding: 10px;
+}
+
+#input-section form {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#input-section form .description {
+    width: 100%;
+    height: 90px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border-top: 1px solid grey;
+    border-bottom: 1px solid grey;
+
+}
+
+form .description label,
+form .drop-down-menu label,
+form .date-input label {
+    margin: 0;
+    padding: 5px 10px;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+form .description textarea {
+    width: 100%;
+    height: 90%;
+    outline: none;
+    border: none;
+    padding: 5px 10px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    color: grey;
+}
+
+#input-section form .drop-down-menu,
+#input-section form .date-input {
+    width: 50%;
+    height: 60px;
+    padding: 5px 0;
+    border-bottom: 1px solid grey;
+}
+
+#input-section form .drop-down-menu {
+    border-right: 1px solid grey;
+}
+
+form .date-input input,
+form .drop-down-menu select {
+    width: 100%;
+    outline: none;
+    border: none;
+    padding: 5px 7px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    color: grey;
+}
+
+#btn {
+    text-align: center;
+    margin: 10px 0;
+}
+
+#btn button {
+    padding: 10px 12px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    line-height: 30px;
+}
+
+#btn button i {
+    padding: 0 5px;
+}
+
+#btn .addTaskBtn {
+    background-color: green;
+    border: 2px solid green;
+    color: white;
+}
+
+#todo-list {
+    width: 40%;
+    height: 50vh;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+}
+
+#todo-list .task {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px 10px;
+    border: 1px solid grey;
+    margin: 0 0 2px 0;
+}
+
+#todo-list .task .task-details {
+    margin: 0;
+    width: 70%;
+}
+
+#todo-list .task .task-details input {
+    display: inline;
+    margin-right: 10px;
+}
+
+#todo-list .task .task-details span {
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+#todo-list .task .task-details p {
+    margin-left: 25px;
+    margin-top: 10px;
+    font-size: 12px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    color: grey;
+}
+
+#todo-list .task .task-details p i {
+    margin-right: 8px;
+    font-size: 14px;
+}
+
+#todo-list .task .task-controls {
+    width: 30%;
+    display: flex;
+    /* justify-content: flex-start; */
+    /* gap: 10px; */
+}
+
+#todo-list .task .task-controls .task-category {
+    border: 2px solid rgb(86, 85, 85);
+    padding: 5px 10px;
+    color: rgb(86, 85, 85);
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 10px;
+}
+
+#todo-list .task .task-controls .deleteTaskBtn {
+    padding: 5px 8px;
+    background-color: red;
+    border: 2px solid red;
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 10px;
+}
+
+#todo-list .task .task-controls .deleteTaskBtn i {
+    margin-right: 4px;
+}
+
+
+#todo-list .task .task-controls .deleteTaskBtn a {
+    text-decoration: none;
+    color: white;
+}

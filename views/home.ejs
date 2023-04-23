@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/ef699bf353.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/css/home.css">
+    <title>
+        <%= title %>
+    </title>
+</head>
+
+<body>
+    <section id="input-section">
+        <h1>TODO App</h1>
+        <form action="/create-task" method="post">
+            <div class="description">
+                <label for="desc">Description</label>
+                <textarea name="desc" id="desc" placeholder="What you have to do....."></textarea>
+            </div>
+            <div class="drop-down-menu">
+                <label for="category">CATEGORY</label>
+                <select name="category" id="category" selected="Choose a category">
+                    <option value="choose">Choose a category</option>
+                    <option value="personal">Personal</option>
+                    <option value="work">Work</option>
+                    <option value="school">School</option>
+                    <option value="Cleaning">Cleaning</option>
+                    <option value="others">Others</option>
+                </select>
+            </div>
+            <div class="date-input">
+                <label for="date">DATE</label>
+                <input type="date" name="date" id="date" />
+            </div>
+            <div id="btn">
+                <button type="submit" class="addTaskBtn"><i class="fa-solid fa-plus"></i>Add Task</button>
+            </div>
+        </form>
+
+    </section>
+    <ul id="todo-list">
+        <% for(let i of task_list) { %>
+            <li class="task">
+                <div class="task-details">
+                    <input type="checkbox" name="isDone" />
+                    <span>
+                        <%= i.desc%>
+                    </span>
+                    <p><i class="fa-solid fa-calendar-days"></i>
+                        <%= i.date%>
+                    </p>
+                </div>
+                <div class="task-controls">
+                    <span class="task-category">
+                        <%= i.category%>
+                    </span>
+                    <button class="deleteTaskBtn"><i class="fa-solid fa-trash"></i><a
+                            href="/delete-task/?id=<%=i._id%>">Delete</a></button>
+                </div>
+            </li>
+            <% } %>
+    </ul>
+</body>
+
+</html>
